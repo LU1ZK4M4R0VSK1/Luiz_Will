@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empresa de telecomunicações especializada em serviços de fibra óptica, oferecendo conexão rápida e estável.">
+    <meta name="keywords" content="Fibra óptica, internet, telecomunicações, serviços de internet, planos de internet">
+    <meta name="author" content="VIPFIBER TELECOM">
+    <title>VIPFIBER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="lg.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="lg.png" alt="VIPFIBER Logo">
+            </a>
+
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="https://vivo.com.br/para-voce/produtos-e-servicos">Serviços</a></li>
+                    <li><a href="https://vivo.com.br/para-voce/ajuda/duvidas">Dúvidas</a></li>
+                    <li><a href="https://vivo.com.br/para-voce/ajuda/mais-ajuda">Ajuda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="beneficios" class="section">
+            <h1>Por que escolher a VIPFIBER?</h1>
+            <p>Ao escolher a VIPFIBER, você terá acesso aos melhores serviços de telecomunicações, com uma série de benefícios que garantem a sua satisfação:</p>
+            <ul>
+                <li>Conexão de internet estável e de altíssima velocidade com fibra óptica.</li>
+                <li>Planos acessíveis e flexíveis para todos os perfis de usuários.</li>
+                <li>Suporte técnico especializado disponível 24 horas por dia.</li>
+                <li>Serviços adicionais como telefonia e TV a cabo inclusos em pacotes especiais.</li>
+                <li>Promoções exclusivas e descontos para clientes fidelizados.</li>
+            </ul>
+        </section>
+    </main>
+
+    <main>
+        <section id="formulario" class="section">
+            <h2>Entre em Contato</h2>
+            <form action="/enviar" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Enviar</button>
+                <button type="button" onclick="lerDados()">LER DADOS</button>
+            </form>
+        </section>
+
+        <section id="verifica-numero" class="section">
+            <h2>Verificar Número</h2>
+            <button type="button" onclick="verificaNumero()">Verifica Número</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 VIPFIBER Telecom - Todos os direitos reservados.</p>
+            <p>Conectando você ao futuro com tecnologia de ponta!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script><script src="script.js"></script>
+    
+</body>
+</html>
