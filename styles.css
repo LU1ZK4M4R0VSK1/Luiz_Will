@@ -1,0 +1,482 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f1b40b; /* Fundo */
+    color: #FFFFFF; /* Fonte */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para o Cabeçalho */
+header {
+    background-color: #031927; /* Fundo */
+    padding: 20px 0;
+    color: #ec0d0d; /* Fonte */
+    position: fixed; /* Mantém o cabeçalho fixo na tela */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.header-container {
+    background-color: #031927;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFFFF; /* Fonte */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+.logo:hover {
+    color: #DBF227; /* Detalhes */
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #FFFFFF; /* Fonte */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #DBF227; /* Detalhes */
+}
+
+/* Botão de menu hambúrguer */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1001; /* Garante que o botão fique acima do menu */
+}
+
+.menu-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF; /* Fonte */
+    display: block;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+/* Menu responsivo */
+.nav {
+    display: flex;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    color: #FFFFFF; /* Fonte */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #DBF227; /* Detalhes */
+}
+
+/* Menu hambúrguer visível em telas pequenas */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        width: 100%;
+        background-color: #042940; /* Fundo */
+        position: absolute;
+        top: 60px; /* Ajuste conforme a altura do cabeçalho */
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Seção Principal (Hero) */
+.hero {
+    background-color: #042940; /* Fundo */
+    color: #FFFFFF; /* Fonte */
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #9FC131; /* WhatsApp */
+    color: #ffffff; /* Fundo */
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #DBF227; /* Detalhes */
+}
+
+/* Seção de Planos de Internet */
+.internet-plans {
+    color: #F4F4F4;
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.internet-plans h2 {
+    color: #031927;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.plan-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #042940;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.plan-card h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.plan-card p {
+    margin-bottom: 10px;
+}
+
+.plan-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Botão 'Assine Já' dentro dos planos */
+.btn {
+    display: inline-block;
+    background-color: #9FC131; /* Cor de fundo do botão */
+    color: #FFFFFF; /* Cor do texto */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none; /* Remove o sublinhado do link */
+    margin-top: 20px; /* Espaço entre o conteúdo do plano e o botão */
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #DBF227; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.btn:active {
+    background-color: #8CB61D; /* Cor de fundo ao clicar */
+    transform: scale(1); /* Retorno ao tamanho normal */
+}
+
+/* Seção de Cobertura */
+.coverage {
+    padding: 60px 20px;
+    background-color: #042940; /* Fundo */
+    text-align: center;
+}
+
+.coverage h2 {
+    color: #ffffff; /* Fonte */
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.coverage iframe {
+    border: 2px solid #FFFFFF; /* Fonte */
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tabela de Cobertura */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background-color: #031927;
+    color: #FFFFFF;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #9FC131; /* Fundo dos cabeçalhos */
+    font-weight: bold;
+}
+
+td {
+    font-size: 1rem;
+}
+
+/* Listas numeradas e com marcadores */
+ol, ul {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilo para texto destacado */
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+mark {
+    background-color: yellow;
+    padding: 2px 4px;
+    color: #000;
+}
+
+/* Seção de Depoimentos */
+.testimonials {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #042940; /* Fundo */
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #F4F4F4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+}
+
+.testimonial p {
+    color: #042940;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial strong {
+    color: #042940; /* Fundo */
+}
+
+/* Seção de Contato */
+.contact {
+    padding: 60px 20px;
+    background-color: #042940; 
+    text-align: center;
+}
+
+.contact h2 {
+    color: #FFFFFF; /*fonte*/
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin-bottom: 20px;
+}
+
+.contact .btn {
+    background-color: #9FC131; /* WhatsApp */
+    color: #ffffff; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.contact .btn:hover {
+    background-color: #DBF227; /* Detalhes */
+}
+
+/* Botão do WhatsApp */
+.whatsapp-btn {
+    background-color: #9FC131; /* WhatsApp */
+    color: #ffffff; 
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #DBF227;
+}
+
+/* Rodapé */
+footer {
+    background-color: #042940; 
+    color: #FFFFFF; 
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* ícones de rede sociais */
+.social-links{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-links li {
+    display: inline-block; /* os ícones ficam lado a lado */
+}
+
+.social-links a img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.social-links a img:hover {
+    transform: scale(1.1);
+}
