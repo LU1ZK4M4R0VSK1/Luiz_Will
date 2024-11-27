@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Planos de internet com alta velocidade e confiabilidade. Confira nossas opções de fibra óptica!">
+    <meta name="keywords" content="Planos de internet, fibra óptica, alta velocidade, serviços de internet">
+    <meta name="author" content="VIPFIBER TELECOM">
+    <title>Serviços - VIPFIBER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">VIPFIBER</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="cobertura.html">Cobertura</a></li>
+                    <li><a href="depoimentos.html">Depoimentos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>            
+        </div>
+    </header>
+ <!-- Seção dos planos de internet. Aqui mostramos diferentes opções para os clientes escolherem. -->
+ <section id="planos" class="internet-plans">
+    <div class="container">
+        <h2>Escolha o Melhor Plano de Internet para Você</h2>
+        <div class="carousel">
+            <!-- Carrossel de cartões com os planos disponíveis. -->
+            <div class="carousel-wrapper">
+                <!-- Cada "plan-card" é um plano de internet com suas características. -->
+                <div class="plan-card">
+                    <h3>Plano Básico</h3>
+                    <p>100 Mbps de velocidade</p>
+                    <p>Ideal para navegação e redes sociais</p>
+                    <p><strong>R$ 99,90/mês</strong></p>
+                    <a href="contato.html" class="btn">Assine Já</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Plano Intermediário</h3>
+                    <p>300 Mbps de velocidade</p>
+                    <p>Ideal para streaming e downloads rápidos</p>
+                    <p><strong>R$ 149,90/mês</strong></p>
+                    <a href="contato.html" class="btn">Assine Já</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Plano Avançado</h3>
+                    <p>600 Mbps de velocidade</p>
+                    <p>Ideal para gamers e usuários exigentes</p>
+                    <p><strong>R$ 199,90/mês</strong></p>
+                    <a href="contato.html" class="btn">Assine Já</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Plano Ultra</h3>
+                    <p>800 Mbps de velocidade</p>
+                    <p>Para múltiplos dispositivos e máxima performance</p>
+                    <p><strong>R$ 249,90/mês</strong></p>
+                    <a href="contato.html" class="btn">Assine Já</a>
+                </div>
+            </div>
+            <!-- Botões para navegar no carrossel. -->
+            <button class="prev" aria-label="Slide anterior">❮</button>
+            <button class="next" aria-label="Slide seguinte">❯</button>
+        </div>
+    </div>
+
+    <!-- Script que controla o carrossel de planos. TIRA ISSO DAQUI MANO, QUAL TEU PROBLEMA?-->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const carouselWrapper = document.querySelector(".carousel-wrapper");
+            const cards = document.querySelectorAll(".plan-card");
+            const prevButton = document.querySelector(".prev");
+            const nextButton = document.querySelector(".next");
+            let currentIndex = 0;
+
+            // Atualiza a posição do carrossel ao mudar de slide.
+            function updateCarousel() {
+                const offset = -currentIndex * cards[0].offsetWidth;
+                carouselWrapper.style.transform = `translateX(${offset}px)`;
+            }
+
+            // Avança para o próximo slide.
+            nextButton.addEventListener("click", () => {
+                if (currentIndex < cards.length - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            // Volta para o slide anterior.
+            prevButton.addEventListener("click", () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            // Ajusta o carrossel ao redimensionar a janela.
+            window.addEventListener("resize", updateCarousel);
+        });
+    </script>
+</section>
+
+ <!-- Rodapé com direitos autorais e links para redes sociais. -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 VIPFIBER TELECOM.</p>
+            <p>Todos os direitos reservados.</p> <br>
+            <ul class="social-links">
+            <li><a href="https://www.facebook.com/vipfiberprovedor/?locale=pt_BR"><img src="img/facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com/vipfibertelecom/"><img src="img/instagram.png" alt="Instagram"></a></li>
+        </ul>
+        </div>
+    </footer
+</body>
+</html>
+

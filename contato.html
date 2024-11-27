@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a VIPFIBER TELECOM.">
+    <title>Contato - VIPFIBER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">VIPFIBER</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="cobertura.html">Cobertura</a></li>
+                    <li><a href="depoimentos.html">Depoimentos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Sessão de Login -->
+        <div class="login-container">
+            <h2>Acesse sua Conta</h2>
+            <p>Insira seu e-mail e senha para visualizar as informações de contato:</p>
+        
+            <!-- Formulário de Login -->
+            <form id="loginForm" onsubmit="return redirectToWhatsApp(event)">
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+        
+        <script>
+        function redirectToWhatsApp(event) {
+            event.preventDefault(); // Previne o envio do formulário
+        
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+        
+            if (email && password) {
+                // número de whatsapp
+                window.location.href = "https://wa.me/5541984767667"; 
+            } else {
+                alert("Por favor, insira e-mail e senha.");
+            }
+        }
+        </script>
+        
+         <!-- Rodapé com direitos autorais e links para redes sociais. -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 VIPFIBER TELECOM.</p>
+                <p>Todos os direitos reservados.</p> <br>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/vipfiberprovedor/?locale=pt_BR"><img src="img/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/vipfibertelecom/"><img src="img/instagram.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </footer
+    </body>
+</html>
